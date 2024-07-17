@@ -1,0 +1,19 @@
+Socket:
+A socket is a channel for 2 parties to communicate over a network
+For many use-cases,
+	1. The client is the one initiating the channel
+	2. The server is the one waiting for new clients
+
+Redis application uses TCP and provides a continuous stream of bytes
+
+File descriptor(Socket descriptor) - is an integer that uniquely represent a network socket
+	socket() call allocates and returns the descriptor which is later used to create the communication channel
+
+A TCP server listens on a particular address(IP + port) and accepts client connection from that address. 
+
+2 types of socket handles:
+	1. Listening sockets: Obtained by listening on address
+	2. Connection sockets: Obtained by accepting a client connection from listening socket
+
+
+Get rid of the asio.hpp - apt-get install libasio-dev
